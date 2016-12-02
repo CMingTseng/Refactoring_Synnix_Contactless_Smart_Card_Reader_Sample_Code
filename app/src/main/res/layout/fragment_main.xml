@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mybackground1">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ListOnClick"
+            android:text="Connect Reader"
+            android:textAllCaps="false"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textReader"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:text="Reader:"
+            android:visibility="invisible" />
+
+        <Spinner
+            android:id="@+id/spinnerDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="9dp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonOpen"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:onClick="OpenOnClick"
+            android:text="Open Reader"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/buttonClose"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:onClick="CloseOnClick"
+            android:text="Close Reader"
+            android:textAllCaps="false"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/buttonConn"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:onClick="ConnOnClick"
+            android:text="Connect RF Card"
+            android:textAllCaps="false"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/buttonDisconn"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:onClick="DisconnOnClick"
+            android:text="Disconnect RF Card"
+            android:textAllCaps="false"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonTest"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:onClick="TestOnClick"
+            android:text="LED/Buzzer Test"
+            android:textAllCaps="false"
+            android:textSize="14dp"></Button>
+
+        <Button
+            android:id="@+id/buttonUID"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:onClick="UIDOnClick"
+            android:text="Get UID"
+            android:textAllCaps="false"
+            android:textSize="14dp"></Button>
+
+        <Button
+            android:id="@+id/buttonAPDU"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="APDUOnClick"
+            android:text="C-APDU Transmit"
+            android:layout_weight="0.11"
+            android:textAllCaps="false"
+            android:textSize="14dp"></Button>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:text="STATUS:" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:textColor="#555555"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.39"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textAPDU"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textColor="#555555"
+            android:text="C-APDU:" />
+
+        <EditText
+            android:id="@+id/editTextAPDU"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textColor="#555555"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.58"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textRAPDU"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:text="R-APDU:" />
+
+        <TextView
+            android:id="@+id/textResponse"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:textColor="#555555"
+            android:text=""
+            android:layout_weight="0.80" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="12dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.14">
+
+        <Button
+            android:id="@+id/buttonSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:onClick="switchModeOnClick"
+            android:text="Switch Card Mode"
+            android:visibility="invisible"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/modeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</LinearLayout>
